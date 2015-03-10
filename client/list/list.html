@@ -1,1 +1,9 @@
-<div>{{ list.data }}</div>
+<a ng-href='#/new'>Add Job</a>
+<br/>
+<br/>
+<label>
+Search
+<input ng-model="list.search"></input>
+</label>
+
+<job data="company" ng-repeat="company in list.data | filter:list.search | orderBy:'-status'" ng-click="list.edit(company)"></job>

@@ -3,10 +3,16 @@
 angular.module('app.list', [])
   .controller('ListController', ListController)
 
-ListController.$inject = ['$scope']
-function ListController ($scope) {
+ListController.$inject = ['$scope', '$location', 'Jobs']
+function ListController ($scope, $location, Jobs) {
   vm = this;
-  vm.data = "Hello World";
+
+  vm.data = Jobs.getAllJobs();
+  
+  vm.edit = function (job) {
+    Jobs.editJob(job);
+    $location.path('/edit')
+  }
 }
   
 })()

@@ -1,0 +1,54 @@
+<a ng-href='#/'>All Items</a>
+<br>
+<br>
+<form ng-submit=''>
+  <table>
+    <tr>
+      <td>Company Name</td>
+      <td>
+        <input type='text' ng-model="data.name" required>
+      </td>
+    </tr>
+    <tr>
+      <td>URL</td>
+      <td>
+        <input type='text' ng-model="data.url" required>
+      </td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>
+        <textarea type='text' ng-model="data.description"></textarea>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Interested?</td>
+      <td>
+        <input type= 'checkbox' ng-model='data.interested'>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Status
+      </td>
+      <td>
+        Do Stuff
+        <input type='radio' name='status' ng-model="data.status" ng-value=0>
+        Applied
+        <input type='radio' name='status' ng-model="data.status" ng-value=1>
+        Interviewed
+        <input type='radio' name='status' ng-model="data.status" ng-value=2>
+        Offer
+        <input type='radio' name='status' ng-model="data.status" ng-value=3>  
+      </td>
+    </tr>
+
+    <tr>
+      <td> Offer? </td>
+      <td><textarea type='text' ng-model='data.offer'></textarea></td>
+    </tr>
+  </table>
+  <button>Submit</button>
+</form>
