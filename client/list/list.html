@@ -1,9 +1,21 @@
 <a ng-href='#/new'>Add Job</a>
 <br/>
 <br/>
+
+<select ng-model="list.status" ng-change="list.filterStatus(list.status)">
+  <option ng-value="3">Offer</option>
+  <option ng-value="2">Interviewed</option>
+  <option ng-value="1">Applied</option>
+  <option ng-value="0">WIP</option>
+<select>
+
 <label>
 Search
 <input ng-model="list.search"></input>
 </label>
 
-<job data="company" ng-repeat="company in list.data | filter:list.search | orderBy:'-status'" ng-click="list.edit(company)"></job>
+<div>
+  <ul class='list-group'>
+    <job data="company" ng-repeat="company in list.data | filter:list.search" ng-click="list.edit(company)"></job>
+  </ul>
+</div>

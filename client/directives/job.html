@@ -1,5 +1,4 @@
-<div>
-  <span><a ng-href="{{data.url}}">{{ data.name }}</a><span>
-  <span>{{ data.status }}</span>
-  <button>Edit</button>
-<div>
+<li class='list-group-item'>
+  <span class="badge">{{ data.status }}</span>
+  <a ng-href="{{data.url}}">{{ data.name }}</a>
+</li>

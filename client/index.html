@@ -4,8 +4,18 @@
   <title>Find All The Jobs</title>
 </head>
 <body>
+  <div class='container'>
+    <div class="page-header">
+      <h1>ALL THE JOBS</h1>
+    </div>
+    <ng-view><ng-view>
+  </div>
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap.min.css">
 
-  <ng-view><ng-view>
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap-theme.min.css">
   
   <script src="bower/angular/angular.js"></script>
   <script src="bower/angular-route/angular-route.js"></script>
@@ -15,11 +25,13 @@
   <script src="list/list.js"></script>
   <script src="new/new.js"></script>
   <script src="edit/edit.js"></script>
+  <script src='login/login.js'></script>
 
+  <script src="filters/filters.js"></script>
   <script src="services/services.js"></script>
   <script src="directives/form.js"></script>
-  <script src="directives/job.js"></script>>
+  <script src="directives/job.js"></script>
   <script src="app.js"></script>
-  
+
 </body>
 </html>

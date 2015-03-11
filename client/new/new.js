@@ -11,7 +11,7 @@ function NewController ($scope, $location, Jobs) {
   
   vm.submit = function(job) {
     Jobs.addJob(job);
-    $location.path('/');
+    $location.path('/list');
   }
 }
 

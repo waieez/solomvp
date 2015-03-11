@@ -5,17 +5,23 @@ angular.module('app.services', [])
 
 Jobs.$inject = ['$q', '$location', '$firebaseArray'];
 function Jobs ($q, $location, $firebaseArray) {
-  var uri = "https://boiling-torch-2275.firebaseio.com/jobs";
-  var ref = new Firebase(uri);
-  jobs = $firebaseArray(ref);
+  var uri, ref;
+  var jobs = [];
   var edit = {};
 
   return {
+    login: login,
+    getAllJobs: getAllJobs,
     addJob: addJob,
     editJob: editJob,
     getEdit: getEdit,
-    saveEdit: saveEdit,
-    getAllJobs: getAllJobs
+    saveEdit: saveEdit
+  }
+
+  function login (username) {
+    uri = "https://boiling-torch-2275.firebaseio.com/" + username;
+    ref = new Firebase(uri);
+    jobs = $firebaseArray(ref);
   }
 
   function addJob (job) {
@@ -41,6 +47,7 @@ function Jobs ($q, $location, $firebaseArray) {
   }
 
   function getAllJobs () {
+    if (!uri) { $location.path('/login'); }
     return jobs;
   }
 }

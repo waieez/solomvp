@@ -6,12 +6,12 @@ angular.module('app.edit', [])
 EditController.$inject = ['$scope', '$location', 'Jobs']
 function EditController ($scope, $location, Jobs) {
   vm = this;
-  
+  vm.status = 0;
   vm.data = Jobs.getEdit();
 
   vm.submit = function(job) {
     Jobs.saveEdit(job)
-    $location.path('/');
+    $location.path('/list');
   }
 }
 

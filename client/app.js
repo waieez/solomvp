@@ -1,12 +1,17 @@
 (function(){
 
 angular.module('app', [
-  'app.list',
   'app.services',
+  'app.filters',
+
   'app.job',
   'app.form',
+  
   'app.edit',
   'app.new',
+  'app.list',
+  'app.login',
+
   'firebase',
   'ngRoute'
 ])
@@ -15,7 +20,12 @@ angular.module('app', [
 config.$inject = ['$routeProvider'];
 function config ($routeProvider) {
   $routeProvider
-    .when('/', {
+    .when('/login', {
+      templateUrl: 'login/login.html',
+      controller: 'LoginController',
+      controllerAs: 'login'
+    })
+    .when('/list', {
       templateUrl: 'list/list.html',
       controller: 'ListController',
       controllerAs: 'list'
@@ -31,7 +41,7 @@ function config ($routeProvider) {
       controllerAs: 'edit'
     })
     .otherwise({
-      redirectTo: '/'
+      redirectTo: '/login'
     })
 }
 
