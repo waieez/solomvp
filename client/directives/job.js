@@ -9,7 +9,7 @@ function job () {
     restrict: 'E',
     templateUrl: 'directives/job.html',
     scope: {
-      data: '='
+      data: '=',
     }
   }
 

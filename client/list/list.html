@@ -1,6 +1,7 @@
-<a ng-href='#/new'>Add Job</a>
-<br/>
-<br/>
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#/list">Jobs</a></li>
+  <li role="presentation"><a href="#/new">Add a Job</a></li>
+</ul>
 
 <select ng-model="list.status" ng-change="list.filterStatus(list.status)">
   <option ng-value="3">Offer</option>

@@ -6,7 +6,7 @@ angular.module('app.list', [])
 ListController.$inject = ['$scope', '$location', '$filter', 'Jobs'];
 function ListController ($scope, $location, $filter, Jobs) {
   vm = this;
-  
+
   vm.edit = function (job) {
     Jobs.editJob(job);
     $location.path('/edit');
