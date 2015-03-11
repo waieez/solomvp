@@ -41,4 +41,5 @@ Once the project moves into development, the press release can be used as a touc
   
 
 ## Closing and Call to Action ##
-  
+[ ![Codeship Status for waieez/shortly-deploy](https://codeship.com/projects/c527c3c0-a9be-0132-51bc-46f09a3a7fb9/status?branch=master)](https://codeship.com/projects/67221)
+
